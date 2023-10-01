@@ -1,0 +1,19 @@
+html
+    head
+        title Edit Book
+        link(rel='stylesheet', href='/styles.css')
+    body
+        h2 Edit Book
+        form(action=`/books/edit/${book.id}`, method='POST')
+            label(for='title') Title:
+            input(type='text', name='title', value=book.title, required)
+            br
+            label(for='author') Author:
+            input(type='text', name='author', value=book.author, required)
+            br
+            label(for='releaseDate') Release Date:
+            input(type='text', name='releaseDate', value=book.releaseDate, placeholder='YYYY-MM-DD', required)
+            br
+            button(type='submit') Save Changes
+        a(href=`/books/${book.id}`) Back to Book
+        script(src='/main.js')

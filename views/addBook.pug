@@ -1,0 +1,19 @@
+html
+    head
+        title Add New Book
+        link(rel='stylesheet', href='/styles.css')
+    body
+        h1 Add New Book
+        form(action='/books/add', method='POST')
+            label(data-label='Title') Title:
+            input(type='text', name='title', required)
+            label(data-label='Author') Author:
+            input(type='text', name='author', required)
+            label(data-label='Release Date') Release Date:
+            input(type='text', name='releaseDate', placeholder='YYYY-MM-DD', required)
+            label(data-label='Image URL') Image URL:
+            input(type='text', name='imageURL', required)
+            button(type='submit', class='btn btn-primary') Add Book
+        a(href='/books', class='btn btn-info btn-margin') Back to Books
+        script(src='/main.js')
+

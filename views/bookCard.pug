@@ -1,0 +1,59 @@
+html
+    head
+        title Book Details
+        link(rel='stylesheet', href='/styles.css')
+    body
+        h1 Book Details
+        table
+            tr
+                td ID
+                td= book.id
+            tr
+                td Title
+                td= book.title
+            tr
+                td Author
+                td= book.author
+            tr
+                td Release Date
+                td= book.releaseDate
+            tr
+                td Availability
+                td= book.isAvailable ? 'Available' : 'Not Available'
+            tr
+                td Borrower
+                td= book.borrower
+            tr
+                td Return Date
+                td= book.returnDate
+            tr
+                img(src=book.imageURL, alt=book.title, class='book-cover')
+        a(href=`/books/edit/${book.id}`, class='btn btn-primary btn-margin') Edit Book
+        a(href='#', onclick=`deleteBook(${book.id})`, class='btn btn-danger btn-margin') Delete Book
+        a(href='/books', class='btn btn-info btn-margin') Back to Books
+
+        a(href="javascript:void(0)", onclick="openDialog('issueDialog')", class="btn btn-info btn-margin") Issue Book
+
+
+        dialog#issueDialog
+            h2 Issue Book
+            form(action=`/books/${book.id}/issue`, method='POST')
+                label(for='borrower') Borrower:
+                input(type='text', name='borrower', required)
+                br
+                label(for='returnDate') Return Date:
+                input(type='text', name='returnDate', placeholder='YYYY-MM-DD', required)
+                br
+                button(type='submit') Issue
+            button(onclick="closeDialog('issueDialog')") Cancel
+
+        a(href="javascript:void(0)", onclick="openDialog('returnDialog')", class="btn btn-info btn-margin") Return Book
+
+
+        dialog#returnDialog
+            h2 Return Book
+            form(action=`/books/${book.id}/return`, method='POST')
+                button(type='submit') Return
+            button(onclick="closeDialog('returnDialog')") Cancel
+
+        script(src='/main.js')

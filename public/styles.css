@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#bookList, #bookDetails, #addBookForm, #editBookForm, #readerList {
+    margin-top: 20px;
+}
+
+label[for='title'], label[for='author'],
+label[for='releaseDate'], label[for='imageURL'],
+label[for='id'], label[for='borrower'], label[for='returnDate'] {
+    color: black;
+}
+
+.book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.book-item {
+    width: 18%;
+    margin: 0 20px 20px 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.book-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-cover {
+    max-width: 20%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.btn-margin {
+    margin-right: 10px; /* Устанавливаем расстояние между кнопками */
+}

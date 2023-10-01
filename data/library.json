@@ -1,0 +1,96 @@
+{
+
+  "books": [
+    {
+      "id": 1,
+      "title": "Женщина в белом",
+      "author": "Уилки Коллинз",
+      "releaseDate": "2023-01-01",
+      "isAvailable": true,
+      "borrower": null,
+      "returnDate": null,
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/26/669/2666926.jpg"
+    },
+
+    {
+      "id": 2,
+      "title": "Смятение чувств",
+      "author": "Стефан Цвейг",
+      "releaseDate": "2023-01-01",
+      "isAvailable": true,
+      "borrower": null,
+      "returnDate": null,
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/29/192/2919286.jpg"
+    },
+
+    {
+      "id": 3,
+      "title": "Славно, славно мы резвились",
+      "author": "Джордж Оруэлл",
+      "releaseDate": "2023-01-01",
+      "isAvailable": true,
+      "borrower": null,
+      "returnDate": null,
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/29/264/2926483.jpg"
+    },
+
+    {
+      "id": 4,
+      "title": "Консуэло",
+      "author": "Жорж Санд",
+      "releaseDate": "2023-01-01",
+      "isAvailable": true,
+      "borrower": null,
+      "returnDate": null,
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/29/508/2950862.jpg"
+    },
+
+    {
+      "id": 5,
+      "title": "Название книги",
+      "author": "Автор книги",
+      "releaseDate": "2023-01-01",
+      "isAvailable": true,
+      "borrower": null,
+      "returnDate": null,
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/26/669/2666926.jpg"
+    },
+
+    {
+      "id": 6,
+      "title": "Супружество как точная наука",
+      "author": "О. Генри",
+      "releaseDate": "2023-01-01",
+      "isAvailable": true,
+      "borrower": null,
+      "returnDate": null,
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/28/655/2865554.jpg"
+    },
+
+    {
+      "id": 7,
+      "title": "Нежнее нежного лицо твое...",
+      "author": "Осип Мандельштам",
+      "releaseDate": "2023-01-01",
+      "isAvailable": true,
+      "borrower": null,
+      "returnDate": null,
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/28/387/2838751.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Дары Волхвов",
+      "author": "О. Генри",
+      "releaseDate": "2023-01-01",
+      "isAvailable": true,
+      "borrower": null,
+      "returnDate": null,
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/29/218/2921832.jpg"
+    }
+  ],
+
+  "borrowers": [
+
+  ]
+
+}
