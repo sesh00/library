@@ -79,8 +79,8 @@ module.exports = (libraryData) => {
         book.borrower = req.body.borrower;
         book.returnDate = req.body.returnDate;
 
-        const borrowerName = req.body.borrower; // Получаем имя заемщика из запроса
-        const returnDate = req.body.returnDate; // Получаем дату возврата из запроса
+        const borrowerName = req.body.borrower;
+        const returnDate = req.body.returnDate;
 
         const borrowerIndex = libraryData.borrowers.findIndex(reader => reader.name === borrowerName);
 
@@ -108,10 +108,14 @@ module.exports = (libraryData) => {
 
                 if (borrowerIndex !== -1) {
                     libraryData.borrowers[borrowerIndex].books = libraryData.borrowers[borrowerIndex].books.filter(book => book.id !== bookId);
+                    if (libraryData.borrowers[borrowerIndex].books.length === 0) {
+                        libraryData.borrowers.splice(borrowerIndex, 1);
+                    }
                 }
 
                 book.borrower = null;
                 book.returnDate = null;
+                book.isAvailable = true;
 
                 res.redirect(`/books/${bookId}`);
             } else {
