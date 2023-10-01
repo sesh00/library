@@ -18,6 +18,7 @@ app.use('/readers', readerRouter(libraryData));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
+app.get('/', (req, res) => {
+    res.render('layout');
+});
 app.listen(3000, () => console.log('Server is running on port 3000'));

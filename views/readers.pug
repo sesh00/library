@@ -1,23 +1,26 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Readers
-        link(rel="stylesheet", href="/styles.css")
-    body
-        h1 Readers
-        if !borrowers
-            p No borrower data available.
-        else if borrowers.length === 0
-            p No borrowers available.
-        else
-            each borrower in borrowers
-                h2= borrower.name
-                if borrower.books.length > 0
-                    ul
-                        each book in borrower.books
-                            li
-                                h3= book.title
-                                p= `ID: ${book.id}`
-                                p= `Return Date: ${book.returnDate || 'Not specified'}`
+extends layout
+
+block content
+
+    html(lang="en")
+        head
+            meta(charset="UTF-8")
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            title Readers
+            link(rel="stylesheet", href="/styles.css")
+        body
+            h1 Readers
+            if !borrowers
+                p No borrower data available.
+            else if borrowers.length === 0
+                p No borrowers available.
+            else
+                each borrower in borrowers
+                    h2= borrower.name
+                    if borrower.books.length > 0
+                        ul
+                            each book in borrower.books
+                                li
+                                    h3= book.title
+                                    p= `ID: ${book.id}`
+                                    p= `Return Date: ${book.returnDate || 'Not specified'}`

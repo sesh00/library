@@ -1,17 +1,16 @@
-html
-    head
-        title Library Books
-        link(rel='stylesheet', href='/styles.css')
-    body
-        h1 Library Books
-        .book-grid
-            each book in books
-                .book-item
-                    img(src=book.imageURL, alt=book.title)
-                    h4
-                        a(href=`/books/${book.id}`) #{book.title}
-                    p= book.author
+extends layout
 
-        a(href='/books/add', class='btn btn-success btn-margin') Add New Book
+block content
+    p
 
-        script(src='/main.js')
+    .book-grid
+        each book in books
+            .book-item
+                img(src=book.imageURL, alt=book.title)
+                h4
+                    a(href=`/books/${book.id}`) #{book.title}
+                p= book.author
+
+    a(href='/books/add', class='btn btn-success btn-margin') Add New Book
+
+    script(src='/main.js')
