@@ -44,7 +44,8 @@ module.exports = (libraryData) => {
     });
 
     router.get('/', (req, res) => {
-        res.render('books', { books: libraryData.books });
+        const filters = req.query; // Получаем фильтры из запроса
+        res.render('books', { books: libraryData.books, filters });
     });
 
     router.get('/:id', (req, res) => {
@@ -124,6 +125,19 @@ module.exports = (libraryData) => {
         } else {
             res.status(404).json({ message: 'Book not found' });
         }
+    });
+
+    router.post('/filter', (req, res) => {
+        const filters = req.body;
+
+        const filteredBooks = libraryData.books.filter(book => {
+            const isAvailable = filters.available ? book.isAvailable : true;
+            const isOverdue = filters.overdue ? (book.returnDate && new Date(book.returnDate) < new Date()) : true;
+
+            return isAvailable && isOverdue;
+        });
+
+        res.json({ books: filteredBooks });
     });
 
 

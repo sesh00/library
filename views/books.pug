@@ -3,6 +3,16 @@ extends layout
 block content
     p
 
+    form(action='/books', method='get')
+        label
+            input(type='checkbox', name='available', value='true', checked=filters.available === 'true')
+            | В наличии
+        label
+            input(type='checkbox', name='overdue', value='true', checked=filters.overdue === 'true')
+            | Возврат просрочен
+
+    button(type='button', id='applyFilters') Применить фильтры
+
     .book-grid
         each book in books
             .book-item
