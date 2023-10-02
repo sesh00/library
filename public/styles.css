@@ -28,9 +28,10 @@ label[for='id'], label[for='borrower'], label[for='returnDate'] {
     margin: 0 20px 20px 0;
     text-align: center;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
+    background: whitesmoke;
 }
 
 .book-item img {
@@ -45,5 +46,46 @@ label[for='id'], label[for='borrower'], label[for='returnDate'] {
 }
 
 .btn-margin {
-    margin-right: 10px; /* Устанавливаем расстояние между кнопками */
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    background: whitesmoke;
+    border: 1px solid rgb(128, 128, 128);
+    font-size: 23px;
+    font-family: Georgia, serif;
+}
+
+input {
+    background: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(128, 128, 128);
+    margin-bottom: 10px;
+    font-size: 23px;
+    font-family: Georgia, serif;
+}
+
+dialog {
+    background: whitesmoke;
+    border-radius: 10px;
+    border: 1px solid rgb(128, 128, 128);
+}
+
+body {
+    background: antiquewhite;
+    font-size: 23px;
+    font-family: Georgia, serif;
+}
+
+a {
+    font-size: 23px;
+    font-family: Georgia, serif;
+
+}
+td {
+    font-size: 23px;
+    font-family: Georgia, serif;
 }

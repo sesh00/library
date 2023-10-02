@@ -8,13 +8,17 @@ html(lang="en")
     body
         h1 Library
         nav
-            ul
+            ul.fa-ul
                 li
+                    i.fa-li.fa.fa-home
                     a(href="/") Home
                 li
+                    i.fa-li.fa.fa-book
                     a(href="/books") Books
                 li
+                    i.fa-li.fa.fa-user
                     a(href="/readers") Readers
         block content
             p Welcome to the Library! Choose an option from the navigation.
 
+        script(src='https://kit.fontawesome.com/7c9a06390c.js', crossorigin='anonymous')

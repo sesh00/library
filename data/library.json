@@ -47,13 +47,13 @@
 
     {
       "id": 5,
-      "title": "Название книги",
-      "author": "Автор книги",
+      "title": "Мэнсфилд-Парк",
+      "author": "Джейн Остен",
       "releaseDate": "2023-01-01",
       "isAvailable": true,
       "borrower": null,
       "returnDate": null,
-      "imageURL": "https://cdn.img-gorod.ru/nomenclature/26/669/2666926.jpg"
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/28/228/2822880.jpg"
     },
 
     {
@@ -86,6 +86,27 @@
       "borrower": null,
       "returnDate": null,
       "imageURL": "https://cdn.img-gorod.ru/nomenclature/29/218/2921832.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Полноч в саду добра и зла",
+      "author": "Джон Берендт",
+      "releaseDate": "2023-01-01",
+      "isAvailable": true,
+      "borrower": null,
+      "returnDate": null,
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/28/357/2835750.jpg"
+    },
+
+    {
+      "id": 10,
+      "title": "Тайна поместья Горсторп",
+      "author": "Артур Конан Дойл",
+      "releaseDate": "2023-01-01",
+      "isAvailable": true,
+      "borrower": null,
+      "returnDate": null,
+      "imageURL": "https://cdn.img-gorod.ru/nomenclature/28/769/2876907.jpg"
     }
   ],
 

@@ -37,14 +37,14 @@ module.exports = (libraryData) => {
 
         if (bookIndex !== -1) {
             libraryData.books.splice(bookIndex, 1);
-            res.sendStatus(204); // Отправляем ответ с кодом 204
+            res.sendStatus(204);
         } else {
             res.status(404).json({ message: 'Book not found' });
         }
     });
 
     router.get('/', (req, res) => {
-        const filters = req.query; // Получаем фильтры из запроса
+        const filters = req.query;
         res.render('books', { books: libraryData.books, filters });
     });
 

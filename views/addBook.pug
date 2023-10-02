@@ -7,12 +7,16 @@ html
         form(action='/books/add', method='POST')
             label(data-label='Title') Title:
             input(type='text', name='title', required)
+            br
             label(data-label='Author') Author:
             input(type='text', name='author', required)
+            br
             label(data-label='Release Date') Release Date:
             input(type='text', name='releaseDate', placeholder='YYYY-MM-DD', required)
+            br
             label(data-label='Image URL') Image URL:
             input(type='text', name='imageURL', required)
+            br
             button(type='submit', class='btn btn-primary') Add Book
         a(href='/books', class='btn btn-info btn-margin') Back to Books
         script(src='/main.js')

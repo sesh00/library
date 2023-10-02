@@ -10,8 +10,8 @@ block content
         label
             input(type='checkbox', name='overdue', value='true', checked=filters.overdue === 'true')
             | Возврат просрочен
-
-    button(type='button', id='applyFilters') Применить фильтры
+        button(type='button', id='applyFilters') Найти
+    br
 
     .book-grid
         each book in books
