@@ -73,6 +73,7 @@ module.exports = (libraryData) => {
 
 
     router.post('/:id/issue', (req, res) => {
+
         const bookId = parseInt(req.params.id);
         const book = libraryData.books.find(book => book.id === bookId);
 

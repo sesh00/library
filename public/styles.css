@@ -28,7 +28,7 @@ label[for='id'], label[for='borrower'], label[for='returnDate'] {
     margin: 0 20px 20px 0;
     text-align: center;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 2px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background: whitesmoke;

@@ -1,3 +1,12 @@
+function handleCheckboxChange(checkbox) {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+        if (cb !== checkbox) {
+            cb.checked = false;
+        }
+    });
+}
+
 function deleteBook(id) {
     const confirmation = confirm("Are you sure you want to delete this book?");
     if (!confirmation) {

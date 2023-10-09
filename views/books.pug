@@ -5,10 +5,10 @@ block content
 
     form(action='/books', method='get')
         label
-            input(type='checkbox', name='available', value='true', checked=filters.available === 'true')
+            input(type='checkbox', name='available', value='true', checked=filters.available === 'true', onchange='handleCheckboxChange(this)')
             | В наличии
         label
-            input(type='checkbox', name='overdue', value='true', checked=filters.overdue === 'true')
+            input(type='checkbox', name='overdue', value='true', checked=filters.overdue === 'true', onchange='handleCheckboxChange(this)')
             | Возврат просрочен
         button(type='button', id='applyFilters') Найти
     br

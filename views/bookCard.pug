@@ -32,7 +32,8 @@ html
         a(href='#', onclick=`deleteBook(${book.id})`, class='btn btn-danger btn-margin') Delete Book
         a(href='/books', class='btn btn-info btn-margin') Back to Books
 
-        a(href="javascript:void(0)", onclick="openDialog('issueDialog')", class="btn btn-info btn-margin") Issue Book
+        if(book.isAvailable)
+            a(href="javascript:void(0)", onclick="openDialog('issueDialog')", class="btn btn-info btn-margin") Issue Book
 
 
         dialog#issueDialog
